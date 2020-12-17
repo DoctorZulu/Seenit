@@ -32,3 +32,9 @@ The MVP is to have full CRUD functionality in a reddit style setting. Users shou
 ======= Stretch Goals =======
 
 The main stretch goal is to have a working upvote system that will allow the best comments and articles to be displayed the most prominently among their counterparts. Additional goals include integrating API's for news streams, embedded youtube videos, and google sign-in (among generic user authentication)
+
+
+<img src="Wireframes/seenitwireframecommentpage.png" alt="Website Wireframe">
+<img src="Wireframes/seenitwireframehomepage.png" alt="Website Wireframe">
+<img src="Wireframes/seenitwireframepostpage.png" alt="Website Wireframe">
+<img src="ERD Diagram.svg" alt="Website Wireframe">
