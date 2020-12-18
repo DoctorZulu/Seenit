@@ -18,11 +18,11 @@
         <!-- VIEW POSTS -->
         <section>
             <h2>Post Data</h2>
-            <a href="/post/<%= post._id %>/edit">Edit</a>
+            <a href="/post/<%= comment._id %>/edit">Edit</a>
             <ul>
                 <li>Post Name: <%= author.name %></li>
-                <li>Body: <%=post.body %></li>
-                <li>User: <%= post.author.name %></li>
+                <li>Body: <%= article.body %></li>
+                <li>User: <%= article.author.name %></li>
             </ul>
         </section>
         <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
