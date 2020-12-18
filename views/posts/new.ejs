@@ -8,12 +8,30 @@
 <body>
     <nav>
         <h1>Write your post</h1>
-        <ul>
-            <li>
-                <!-- <a href="/authors"></a> -->
-            </li>
-        </ul>
     </nav>
-    
+    <main>
+        <form action="/posts" method="POST">
+            <p>
+                <input type="text" name="title" placeholder="Title" />
+            </p>
+            <p>
+                <textarea type="text" name="body" placeholder="Body"></textarea>
+            </p>
+
+            <p>
+            <select name ='category'>
+                <option default>Select a Category</option>
+
+            <% categories.forEach ( category => { %>
+                <option value="<%= category._id %>">
+                    <%= category.name %>
+                </option>
+            <% }) %>
+            </select>
+            </p>
+
+            <input type="submit" value="Create Post">
+        </form>
+    </main>
 </body>
 </html>
