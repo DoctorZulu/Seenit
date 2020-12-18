@@ -19,15 +19,20 @@
             </p>
 
             <p>
-            <select name ='category'>
-                <option default>Select a Category</option>
-
-            <% categories.forEach ( category => { %>
-                <option value="<%= category._id %>">
-                    <%= category.name %>
-                </option>
-            <% }) %>
-            </select>
+                <label for="categories">Categories</label>
+            
+                <select name="categories" id="categories">
+                    <option value="music">Music</option>
+                    <option value="aww">Aww</option>
+                    <option value="world">World</option>
+                    <option value="events">Events</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="wellThatSucks">Well That Sucks</option>
+                    <option value="roastMe">Roast Me</option>
+                    <option value="casualDankMemes">Casual Dank Memes</option>
+                    <option value="danTheMan">Dan The Man</option>
+                </select>
             </p>
 
             <input type="submit" value="Create Post">
