@@ -18,14 +18,14 @@
         <!-- VIEW POSTS -->
         <section>
             <h2>Post Data</h2>
-            <a href="/post/<%= comment._id %>/edit">Edit</a>
+            <a href="/post/<%= post._id %>/edit">Edit</a>
             <ul>
-                <li>Post Name: <%= author.name %></li>
-                <li>Body: <%= article.body %></li>
-                <li>User: <%= article.author.name %></li>
+                <li>Post Name: <%= post.name %></li>
+                <li>Body: <%= post.body %></li>
+                <li>User: <%= post.author %></li>
             </ul>
         </section>
-        <form action="/posts/<%= article._id %>?_method=DELETE" method="POST">
+        <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete" />
         </form>
     </form>
@@ -35,10 +35,13 @@
         <select name = 'user'>
             <option default>Select a User</option>
 
-        <% comments.forEach ( comment => { %>
+        <% post.comments.forEach ( comment => { %>
         <option value="<%= comment._id %>">
+ lamsauce
             <%= post.comment %>
-            <%= post.comment.author %>
+            <%= post.comment.author 
+ 
+ submaster
         </option>
         <% }) %>
     </select>
