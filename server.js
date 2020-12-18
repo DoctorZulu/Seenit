@@ -7,7 +7,7 @@ const controllers = require("./controllers");
 
 const app = express();
 
-const PORT = 4200;
+const PORT = 4001;
 
 app.set("view engine", "ejs"); 
 /* ==== Middleware ==== */
