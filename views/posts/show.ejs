@@ -31,13 +31,18 @@
     </form>
 
         <!-- VIEW COMMENTS -->
-    <section>
-        <h2>Comments</h2>
-        <ul>
-            <li>Body: <%= article.body %></li>
-            <li>User: <%= article.author.name %></li>
-        </ul>
-    </section>
+    <p>
+        <select name = 'user'>
+            <option default>Select a User</option>
+
+        <% comments.forEach ( comment => { %>
+        <option value="<%= comment._id %>">
+            <%= comment.body %>
+            <%= user.comment %>
+        </option>
+        <% }) %>
+    </select>
+</p>
 
     </main>
     
