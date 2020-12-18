@@ -32,6 +32,7 @@ router.get("/", async function(req,res){
       return res.render("posts/category/index", context);
   
     } catch(err) {
+      
       return res.send(err);
     }
   
@@ -61,10 +62,11 @@ router.get("/", async function(req,res){
   
   
     try {
-      req.body.createdBy = req.session.currentUser.id
+      //req.body.createdBy = req.session.currentUser.id
       await db.Post.create(req.body);
       return res.redirect("/posts");
     } catch(err){
+      console.log(err);
       return res.send(err);
     }
   
