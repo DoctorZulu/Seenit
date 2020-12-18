@@ -36,9 +36,9 @@
             <option default>Select a User</option>
 
         <% post.comments.forEach ( comment => { %>
-        <option value="<%= comment._id %>">
-            <%= comment.body %>
-            <%= comment.author %>
+        <option value="<%= post._id %>">
+            <%= post.comments.body %>
+            <%= comment.comments.author %>
         </option>
         <% }) %>
     </select>
