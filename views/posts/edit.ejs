@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body>
+    <main>
+        <h2>Edit <%= article.body %></h2>
+        <form action="/articles/<%= article._id %>?_method=PUT" method="POST">
+            <p>
+                <input
+                type="text"
+                name="title"
+                placeholder="Post Title"
+                value="<%= article.title %>"
+                >
+            </p>
+            <p>
+                <input
+                type="text"
+                name="body"
+                placeholder="Body"
+                value="<%= article.body %>"
+                >
+            </p>
+            <input type="submit" value="Apply Changes">
+        </form>
+    </main>
+    
+</body>
+</html>
