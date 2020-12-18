@@ -47,7 +47,7 @@ app.use(function(req,res,next){
   next();
 });
 
-  //auth function
+  //auth middleware
 
 app.use(function(req,res,next){
   app.locals.user =  req.session.currentUser;
