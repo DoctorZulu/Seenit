@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+</head>
+<body>
+    <nav>
+        <h1>Post</h1>
+        <ul>
+            <li>
+            <a href="/posts">Posts</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!-- VIEW POSTS -->
+        <section>
+            <h2>Post Data</h2>
+            <a href="/post/<%= post._id %>/edit">Edit</a>
+            <ul>
+                <li>Post Name: <%= author.name %></li>
+                <li>Body: <%=post.body %></li>
+                <li>User: <%= post.author.name %></li>
+            </ul>
+        </section>
+        <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" />
+        </form>
+    </form>
+
+        <!-- VIEW COMMENTS -->
+    <p>
+        <select name = 'user'>
+            <option default>Select a User</option>
+
+        <% comments.forEach ( comment => { %>
+        <option value="<%= comment._id %>">
+            <%= comment.body %>
+            <%= user.comment %>
+        </option>
+        <% }) %>
+    </select>
+</p>
+
+    </main>
+    
+</body>
+</html>
