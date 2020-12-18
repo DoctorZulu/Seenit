@@ -41,10 +41,10 @@ router.post("/register", async function(req,res){
 
 
 router.get("/login", function(req,res){
-  res.render("auth/login", {message: ""});
+  res.render("auth/login", {message: "Welcome!"});
 });
 
-// Verify - POST - /login - Functional - will take in the body data and ensure the credentials are valid
+
 
 router.post("/login", async function(req, res){
   // logic to check if user exists in database
@@ -52,11 +52,11 @@ router.post("/login", async function(req, res){
   try {
     const foundUser = await db.User.findOne({ email: req.body.email });
 
-    if(!foundUser) return res.render("auth/login", {message: "Account Not Found. Please register."});
+    if(!foundUser) return res.render("auth/login", {message: "Account Not Found. Please try again or register if new."});
 
     const match = await bcrypt.compare(req.body.password, foundUser.password);
 
-    if(!match) return res.render("auth/login", {message: "Password or Email invalid."});
+    if(!match) return res.render("auth/login", {message: "Invalid login, please try again"});
 
     // create our user on the session
     req.session.currentUser = {
