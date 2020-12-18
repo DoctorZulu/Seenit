@@ -8,12 +8,35 @@
 <body>
     <nav>
         <h1>Write your post</h1>
-        <ul>
-            <li>
-                <!-- <a href="/authors"></a> -->
-            </li>
-        </ul>
     </nav>
-    
+    <main>
+        <form action="/posts" method="POST">
+            <p>
+                <input type="text" name="title" placeholder="Title" />
+            </p>
+            <p>
+                <textarea type="text" name="body" placeholder="Body"></textarea>
+            </p>
+
+            <p>
+                <label for="categories">Categories</label>
+            
+                <select name="categories" id="categories">
+                    <option value="music">Music</option>
+                    <option value="aww">Aww</option>
+                    <option value="world">World</option>
+                    <option value="events">Events</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="wellthatsucks">Well That Sucks</option>
+                    <option value="roastme">Roast Me</option>
+                    <option value="casualdankmemes">Casual Dank Memes</option>
+                    <option value="dantheman">Dan The Man</option>
+                </select>
+            </p>
+
+            <input type="submit" value="Create Post">
+        </form>
+    </main>
 </body>
 </html>
