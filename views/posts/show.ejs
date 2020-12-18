@@ -37,14 +37,28 @@
 
         <% comments.forEach ( comment => { %>
         <option value="<%= comment._id %>">
-            <%= comment.body %>
-            <%= author.comment %>
+            <%= post.comment %>
+            <%= post.comment.author %>
         </option>
         <% }) %>
     </select>
 </p>
-
     </main>
-    
+
+     <!-- Create a Comment -->
+        <section>
+            <h2>Create Comment</h2>
+            <!-- <a href="/post/<%= comment._id %>/edit">Edit</a>
+            <ul>
+                <li>Post Name: <%= author.name %></li>
+                <li>Body: <%= article.body %></li>
+                <li>User: <%= article.author.name %></li>
+            </ul>
+        </section>
+        <form action="/posts/<%= article._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" />
+        </form>
+    </form> -->
+
 </body>
 </html>
