@@ -29,7 +29,7 @@ router.get("/", async function(req,res){
       const allPosts = await db.Post.find({category: req.params.name}); //regex needed to filter by category?
   
       const context = {post: allPosts}
-      return res.render("posts/index", context);
+      return res.render("posts/category/index", context);
   
     } catch(err) {
       return res.send(err);

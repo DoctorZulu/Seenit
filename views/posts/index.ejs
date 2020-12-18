@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seenit | Index</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Seenit</h1>
+      <ul>
+        
+        <li>
+          <a href="/posts/new">Create A New Post</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <main>
+      <h2>All Posts</h2>
+      
+      <% if(!posts.length) { %>
+        <a href="/posts/new">Create A New Post</a>
+      <% } %>
+
+      <ul>
+        <% posts.forEach(post => { %>
+        <li>
+          <a href="/posts/<%= post._id %>"> <%= post.title %> </a>
+          <a href="/posts/<%= post._id %>"> <%= post.category %> </a>
+          <a href="/posts/<%= post._id %>"> <%= post.author %> </a>
+        </li>
+        <% }) %>
+      </ul>
+
+      <ul>
+        
+        <li>
+          <a href="/posts/"> All</a>
+          <a href="/posts/category/music"> Music </a>
+          <a href="/posts/category/aww"> Aww </a>
+          <a href="/posts/category/worldevents"> World Events</a>
+          <a href="/posts/category/gaming"> Gaming </a>
+          <a href="/posts/category/youtube"> YouTube </a>
+          <a href="/posts/category/wellthatsucks"> Well That Sucks </a>
+          <a href="/posts/category/roastme"> Roast Me </a>
+          <a href="/posts/category/casual"> Casual </a>
+          <a href="/posts/category/dankmemes"> Dank Memes</a>
+          <a href="/posts/category/smashbros"> Smashbros </a>
+        </li>
+        
+      </ul>
+
+      
+    </main>
+  </body>
+</html>
