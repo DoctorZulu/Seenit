@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 
-const dbUrl = "mongodb://localhost:27017/seenit"
+const dbUrl = "mongodb://localhost:27017/seenit";
 
 
 mongoose.connect(dbUrl, {

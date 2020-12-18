@@ -141,6 +141,8 @@ router.get("/", async function(req,res){
 
 });
   
-  
+router.get("/new/comments", function(req,res){
+  res.render("posts/newcomment");
+});
   
   module.exports = router;
