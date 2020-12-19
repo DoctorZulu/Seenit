@@ -38,11 +38,12 @@ router.get("/", async function(req,res){
   
   }); */
 
-  app.get("/categories/:name", function(req,res){
-    db.Post.find({category: req.params.name},function(err, foundData){
+  router.get("/category/:name", function(req,res){
+    db.Post.find({category: req.params.category},function(err, foundData){
       if (err) return res.send(err);
       
       const context = { post: foundData };
+      return res.render("posts/category/index", context);
     })
   })
 
