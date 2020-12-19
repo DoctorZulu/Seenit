@@ -12,9 +12,9 @@
 
     <!-- Adds Comment -->
     <main>
-        <form action="/posts" method="POST">
+        <form action="/posts/<%= post._id %>/comments" method="POST">
           <p>
-            <textarea type="text" name="body" placeholder="Write your comment here..."></textarea>
+            <textarea type="text" name="commentbody" placeholder="Write your comment here..."></textarea>
           </p>
           
           <input type="submit" value="Create" />

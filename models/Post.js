@@ -4,14 +4,14 @@ const mongoose = require("mongoose");
 // schema
 const postSchema = mongoose.Schema(
 	{
-		title: { type: String, required: true },
-		body: { type: String, required: true },
+		title: { type: String },
+		body: { type: String },
         author: { type: mongoose.Schema.Types.ObjectId, ref: "Author" },
-        category: { type: String, required: true},
+        category: { type: String},
         comments: [
             {
-                body: { type: String, required: true},
-                author: { type: mongoose.Schema.Types.ObjectId, ref: "Author" },
+                commentbody: { type: String},
+                commentauthor: { type: mongoose.Schema.Types.ObjectId, ref: "Author" },
             }
         ]
 	},

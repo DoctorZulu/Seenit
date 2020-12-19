@@ -31,37 +31,28 @@
     </form>
 
         <!-- VIEW COMMENTS -->
-    <p>
-        <select name = 'user'>
-            <option default>Select a User</option>
+        <p>
+            <form action="/posts/<%= post._id %>/comments" method="POST">
+                <p>
+                  <textarea type="text" name="commentbody" placeholder="Write your comment here..."></textarea>
+                </p>
+                
+                <input type="submit" value="Create" />
+              </form>
+            
+    
+            <% post.comments.forEach ( comment => { %>
+            <p>
+                <%= comment.commentbody %>
+                <%= comment.commentauthor %>
+            </p>
+            <% }) %>
+        
+        
+    </p>
 
-        <% post.comments.forEach ( comment => { %>
-        <option value="<%= comment._id %>">
- lamsauce
-            <%= post.comment %>
-            <%= post.comment.author 
- 
- submaster
-        </option>
-        <% }) %>
-    </select>
-</p>
-    </main>
-
-     <!-- Create a Comment -->
-        <section>
-            <h2>Create Comment</h2>
-            <!-- <a href="/post/<%= comment._id %>/edit">Edit</a>
-            <ul>
-                <li>Post Name: <%= author.name %></li>
-                <li>Body: <%= article.body %></li>
-                <li>User: <%= article.author.name %></li>
-            </ul>
-        </section>
-        <form action="/posts/<%= article._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete" />
-        </form>
-    </form> -->
-
-</body>
-</html>
+    
+        </main>
+        
+    </body>
+    </html>
