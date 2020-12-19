@@ -27,7 +27,7 @@ app.use(
     {
       // set the store to the MongoStore we required
       store: new MongoStore({
-        url: "mongodb://localhost:27017/seenit"
+        url: "mongodb+srv://Lamsauce:S91183s91183@sei.my3su.mongodb.net/SEI?retryWrites=true&w=majority"
       }),
       // our secret is a signature in our sessions to verify that it is valid
       secret: "Lamsauce the Great",
