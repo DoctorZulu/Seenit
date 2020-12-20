@@ -50,8 +50,10 @@ router.get("/", async function(req,res){
   })
   */
 
- router.get("/posts", function(req,res){
-  db.Post.find({category: req.query.cat},function(err, foundData){
+ router.get("/category", function(req,res){
+  console.log(req.query)
+  db.Post.find({category: req.query.category},function(err, foundData){
+    console.log(req.query.category)
     if (err) return res.send(err);
       
       const context = { post: foundData};
