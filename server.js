@@ -28,6 +28,7 @@ app.use(
       // set the store to the MongoStore we required
       store: new MongoStore({
         url: "mongodb://localhost:27017/seenit"
+
       }),
       // our secret is a signature in our sessions to verify that it is valid
       secret: "Lamsauce the Great",
@@ -57,12 +58,12 @@ app.use(function(req,res,next){
   
   
 
-app.get("/", function(req, res){
+/* app.get("/", function(req, res){
     // .render(file,context)
     // const context = { user: req.session.currentUser }
     res.render("home");
 });
-  
+   */
   // Auth controller
 app.use("/", controllers.auth);
 

@@ -31,6 +31,7 @@
     </form>
 
         <!-- VIEW COMMENTS -->
+<<<<<<< HEAD
     <p>
         <select name = 'user'>
             <option default>Select a User</option>
@@ -43,8 +44,30 @@
         <% }) %>
     </select>
 </p>
-
-    </main>
+=======
+        <p>
+            <form action="/posts/<%= post._id %>/comments" method="POST">
+                <p>
+                  <textarea type="text" name="commentbody" placeholder="Write your comment here..."></textarea>
+                </p>
+                
+                <input type="submit" value="Create" />
+              </form>
+            
     
-</body>
-</html>
+            <% post.comments.forEach ( comment => { %>
+            <p>
+                <%= comment.commentbody %>
+                <%= comment.commentauthor %>
+            </p>
+            <% }) %>
+        
+        
+    </p>
+>>>>>>> b8051d4f355513a300d7dca6032e71421757df7a
+
+    
+        </main>
+        
+    </body>
+    </html>
