@@ -2,12 +2,12 @@ const express = require ("express");
 const router = express.Router();
 const db = require("../models");
 const { post } = require("./auth");
-const authRequired = require("./middleware/authRequired");
+/* const authRequired = require("./middleware/authRequired");
+ */
 
 // all category index
 router.get("/", async function(req,res){
 
-  
     try {
       const allPosts = await db.Post.find({});
   
@@ -22,7 +22,7 @@ router.get("/", async function(req,res){
 
   // specific category index page
 
-/*   router.get("/category/:name", async function(req,res){
+/* router.get("/category/:name", async function(req,res){
 
   
     try {

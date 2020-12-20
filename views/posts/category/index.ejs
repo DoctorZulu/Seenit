@@ -20,12 +20,12 @@
     <main>
       <h2>All Posts</h2>
       
-      <% if(!posts.length) { %>
+      <% if(!post.length) { %>
         <a href="/posts/new">Create A New Post</a>
       <% } %>
 
       <ul>
-        <% posts.forEach(post => { %>
+        <% post.forEach(post => { %>
         <li>
           <a href="/posts/<%= post._id %>"> <%= post.title %> </a>
           <a href="/posts/<%= post._id %>"> <%= post.category %> </a>
@@ -33,17 +33,6 @@
         </li>
         <% }) %>
       </ul>
-
-      <ul>
-        <% posts.forEach(post => { %>
-        <li>
-          <a href="/posts/<%= post._id %>"> <%= post.title %> </a>
-          <a href="/posts/<%= post._id %>"> <%= post.category %> </a>
-          <a href="/posts/<%= post._id %>"> <%= post.author %> </a>
-        </li>
-        <% }) %>
-      </ul>
-
       
     </main>
   </body>
