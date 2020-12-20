@@ -23,8 +23,9 @@
       <% if(!post.length) { %>
         <a href="/posts/new">Create A New Post</a>
       <% } %>
-
+     
       <ul>
+       
         <% post.forEach(post => { %>
         <li>
           <a href="/posts/<%= post._id %>"> <%= post.title %> </a>

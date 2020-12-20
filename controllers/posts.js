@@ -2,6 +2,7 @@ const express = require ("express");
 const router = express.Router();
 const db = require("../models");
 const { post } = require("./auth");
+
 /* const authRequired = require("./middleware/authRequired");
  */
 
@@ -38,14 +39,25 @@ router.get("/", async function(req,res){
   
   }); */
 
-  router.get("/category/:name", function(req,res){
-    db.Post.find({category: req.params.category},function(err, foundData){
+  /*router.get("/category/:name", function(req,res){
+    db.Post.find({name: req.params.category},function(err, foundData){
       if (err) return res.send(err);
       
       const context = { post: foundData };
+      if (post.category === req.params.category){
       return res.render("posts/category/index", context);
-    })
+    }})
   })
+  */
+
+ router.get("/posts", function(req,res){
+  db.Post.find({category: req.query.cat},function(err, foundData){
+    if (err) return res.send(err);
+      
+      const context = { post: foundData};
+      return res.render("posts/category/index", context);
+  })
+})
 
   router.get("/new", function(req,res){
     res.render("posts/new");
@@ -116,7 +128,7 @@ router.get("/", async function(req,res){
     try {
   
       await db.Post.findByIdAndDelete(req.params.id);
-      return res.redirect("/authors");
+      return res.redirect("/posts");
   
     } catch (err) {
       return res.send(err);
