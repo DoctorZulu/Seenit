@@ -2,12 +2,8 @@ const express = require ("express");
 const router = express.Router();
 const db = require("../models");
 const { post } = require("./auth");
-<<<<<<< HEAD
-//const authRequired = require("./middleware/authRequired");
-=======
 /* const authRequired = require("./middleware/authRequired");
  */
->>>>>>> 0eb4f7db7a66b8f025f6e92830c6c44ddaca6f3f
 
 // all category index
 router.get("/", async function(req,res){
