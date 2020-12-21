@@ -20,7 +20,7 @@
     <main>
       <h2>All Posts</h2>
       
-      <% if(!post.length) { %>
+      <% if(post.length === 0) { %>
         <a href="/posts/new">Create A New Post</a>
       <% } %>
 
@@ -33,8 +33,9 @@
         </li>
         <% }) %>
       </ul>
-      
-      <% if (user.email){ %>
+     
+      <% if (user){ %>
+        <p><%= user.username %></p>
       <form action="/logout?_method=DELETE" method="POST">
         <input type="submit" value="Logout">
       </form>

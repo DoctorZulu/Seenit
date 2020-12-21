@@ -7,7 +7,8 @@ const controllers = require("./controllers");
 
 const app = express();
 
-const PORT = 4001;
+const PORT = 4000
+;
 
 app.set("view engine", "ejs"); 
 /* ==== Middleware ==== */
@@ -59,12 +60,12 @@ app.use(function(req,res,next){
   
   
 
-/* app.get("/", function(req, res){
+app.get("/", function(req, res){
     // .render(file,context)
     // const context = { user: req.session.currentUser }
-    res.render("home");
+   return res.redirect("/posts");
 });
-   */
+   
   // Auth controller
 app.use("/", controllers.auth);
 

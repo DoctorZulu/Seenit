@@ -14,9 +14,10 @@ router.get("/", async function(req,res){
 
     try {
       const allPosts = await db.Post.find({});
-      const aUser = await db.User.findById(req.params.id)
+      //const aUser = await db.User.findById(req.session.id);
+      console.log(req.session, "post/index")
   
-      const context = {post: allPosts, user: aUser}
+      const context = {post: allPosts}
       return res.render("posts/index", context);
   
     } catch(err) {
