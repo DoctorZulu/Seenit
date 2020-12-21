@@ -27,13 +27,13 @@
     <h1>Seenit</h1>
   </div>
 
-  <div class="col-sm-2">
+  <div class="col-sm-2" id="link">
     <a href="/posts/new">Create A New Post</a>
   </div>
-   <div class="col-sm-1">
+   <div class="col-sm-1" id="link">
     <a href="">Login</a>
    </div>
-    <div class="col-sm-1">
+    <div class="col-sm-1" id="link">
     <a href="">Register</a>
   </div>
 </div>
@@ -41,7 +41,7 @@
 
     <main>
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-7" id="allPosts">
           <h2>All Posts</h2>
 
           <% if(!post.length) { %>
@@ -60,22 +60,42 @@
       
     
       </ul>
-      <div class="col-sm-4">
+      <div class="col-sm-3" id="categories">
 
       <h2>Categories</h2>
       <ul>
         
         <li>
           <a href="/posts/"> All</a>
+        </li>
+        <li>
           <a href="/posts/category/music"> Music </a>
+        </li>
+        <li>
           <a href="/posts/category/aww"> Aww </a>
+        </li>
+        <li>
           <a href="/posts/category/worldevents"> World Events</a>
+        </li>
+        <li>
           <a href="/posts/category/gaming"> Gaming </a>
+        </li>
+        <li>
           <a href="/posts/category/youtube"> YouTube </a>
+        </li>
+        <li>
           <a href="/posts/category/wellthatsucks"> Well That Sucks </a>
+        </li>
+        <li>
           <a href="/posts/category/roastme"> Roast Me </a>
+        </li>
+        <li>
           <a href="/posts/category/casual"> Casual </a>
+        </li>
+        <li>
           <a href="/posts/category/dankmemes"> Dank Memes</a>
+        </li>
+        <li>
           <a href="/posts/category/dantheman"> Dan The Man </a>
         </li>
         
