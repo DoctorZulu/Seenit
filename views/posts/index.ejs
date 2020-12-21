@@ -34,12 +34,11 @@
         <% }) %>
       </ul>
       
-      <% if (user.name){ %>
-       <% $("form").css("display", "hide");%>
-    }
+      <% if (user.email){ %>
       <form action="/logout?_method=DELETE" method="POST">
         <input type="submit" value="Logout">
       </form>
+      <% } %>
 
       <ul>
         
