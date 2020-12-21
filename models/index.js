@@ -29,5 +29,7 @@ mongoose.connection.on("disconnected", function(){
 module.exports = {
   Author: require("./Author"),
   Post: require("./Post"),
+  User: require("./User")
+
  
 };

@@ -53,8 +53,9 @@ app.use(function(req,res,next){
 app.use(function(req,res,next){
   app.locals.user =  req.session.currentUser;
   next();
-})
-  
+});
+
+
   
   
 
@@ -67,10 +68,12 @@ app.use(function(req,res,next){
   // Auth controller
 app.use("/", controllers.auth);
 
-//app.use("/authors", controllers.authors);
+
 
 // article controller
 app.use("/posts", controllers.posts);
+
+
 
 /* ==== Server Listener  ==== */
 app.listen(PORT, function(){

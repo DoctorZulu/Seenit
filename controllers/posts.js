@@ -2,17 +2,21 @@ const express = require ("express");
 const router = express.Router();
 const db = require("../models");
 const { post } = require("./auth");
+const authRequired = require("../middleware/authRequired")
 
-/* const authRequired = require("./middleware/authRequired");
- */
+
+
+
+ 
 
 // all category index
 router.get("/", async function(req,res){
 
     try {
       const allPosts = await db.Post.find({});
+      const aUser = await db.User.find({})
   
-      const context = {post: allPosts}
+      const context = {post: allPosts, user: aUser}
       return res.render("posts/index", context);
   
     } catch(err) {
@@ -21,34 +25,7 @@ router.get("/", async function(req,res){
   
   });
 
-  // specific category index page
-
-/* router.get("/category/:name", async function(req,res){
-
-  
-    try {
-      const allPosts = await db.Post.find({category: req.params.category}); 
-  
-      const context = {post: allPosts}
-      return res.render("posts/category/index", context);
-  
-    } catch(err) {
-      
-      return res.send(err);
-    }
-  
-  }); */
-
-  /*router.get("/category/:name", function(req,res){
-    db.Post.find({name: req.params.category},function(err, foundData){
-      if (err) return res.send(err);
-      
-      const context = { post: foundData };
-      if (post.category === req.params.category){
-      return res.render("posts/category/index", context);
-    }})
-  })
-  */
+ 
 
  router.get("/category", function(req,res){
   console.log(req.query)
@@ -81,7 +58,7 @@ router.get("/", async function(req,res){
   
   });
 
-  router.post("/", async function(req,res){
+  router.post("/", authRequired, async function(req,res){
   
   
     try {
@@ -95,7 +72,7 @@ router.get("/", async function(req,res){
   
   });
 
-  router.get("/:id/edit", function(req,res){
+  router.get("/:id/edit", /*authRequired,*/ function(req,res){
 
     db.Post.findById(req.params.id, function (err, foundPost) {
       if (err) return res.send(err);
@@ -106,7 +83,7 @@ router.get("/", async function(req,res){
   
   });
 
-  router.put("/:id", function(req,res){
+  router.put("/:id", /*authRequired,*/ function(req,res){
     db.Post.findByIdAndUpdate(
       req.params.id, 
       {
@@ -124,7 +101,7 @@ router.get("/", async function(req,res){
     );
   });
 
-  router.delete("/:id", async function(req,res){
+  router.delete("/:id", /*authRequired,*/ async function(req,res){
 
   
     try {
@@ -143,7 +120,7 @@ router.get("/", async function(req,res){
 
  
 
-  router.get("/:id/comments/new", function(req,res){
+  router.get("/:id/comments/new", /*authRequired,*/ function(req,res){
 
     db.Post.findById(req.params.id, function (err, foundPost) {
       if (err) return res.send(err);
@@ -154,7 +131,7 @@ router.get("/", async function(req,res){
 
 });
 
-router.post("/:id/comments", function(req, res){
+router.post("/:id/comments", /*authRequired,*/ function(req, res){
   db.Post.findById(req.params.id, function (err, foundPost) {
     foundPost.comments.push(req.body);
     foundPost.save();
