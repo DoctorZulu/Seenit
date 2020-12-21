@@ -7,7 +7,9 @@ const controllers = require("./controllers");
 
 const app = express();
 
-const PORT = 4002;
+
+const PORT = 4000;
+
 
 app.set("view engine", "ejs"); 
 /* ==== Middleware ==== */
@@ -53,24 +55,27 @@ app.use(function(req,res,next){
 app.use(function(req,res,next){
   app.locals.user =  req.session.currentUser;
   next();
-})
-  
+});
+
+
   
   
 
-/* app.get("/", function(req, res){
+app.get("/", function(req, res){
     // .render(file,context)
     // const context = { user: req.session.currentUser }
-    res.render("home");
+   return res.redirect("/posts");
 });
-   */
+   
   // Auth controller
 app.use("/", controllers.auth);
 
-//app.use("/authors", controllers.authors);
+
 
 // article controller
 app.use("/posts", controllers.posts);
+
+
 
 /* ==== Server Listener  ==== */
 app.listen(PORT, function(){

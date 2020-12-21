@@ -40,9 +40,17 @@
 </nav>
 
     <main>
+
       <div class="row">
         <div class="col-sm-7" id="allPosts">
           <h2>All Posts</h2>
+
+      <h2>All Posts</h2>
+      
+      <% if(post.length === 0) { %>
+        <a href="/posts/new">Create A New Post</a>
+      <% } %>
+
 
           <% if(!post.length) { %>
             <a href="/posts/new">Create A New Post</a>
@@ -60,13 +68,24 @@
       
     
       </ul>
+
       <div class="col-sm-3" id="categories">
+
+     
+      <% if (user){ %>
+        <p><%= user.username %></p>
+      <form action="/logout?_method=DELETE" method="POST">
+        <input type="submit" value="Logout">
+      </form>
+      <% } %>
+
 
       <h2>Categories</h2>
       <ul>
         
         <li>
           <a href="/posts/"> All</a>
+
         </li>
         <li>
           <a href="/posts/category/music"> Music </a>
@@ -97,6 +116,8 @@
         </li>
         <li>
           <a href="/posts/category/dantheman"> Dan The Man </a>
+
+
         </li>
         
       </ul>
