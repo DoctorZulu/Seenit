@@ -1,0 +1,45 @@
+nav {
+    margin-bottom: 20px;
+    background: maroon;
+    min-width: 200px;
+    flex: 0 0 600px;
+}
+
+h1 {
+    
+}
+
+#link {
+    text-align: center;
+    padding: 15px;
+}
+
+main {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#allPosts {
+    padding-top: 10px;
+    background: lightblue;
+    margin-left: 40px;
+    margin-right: 20px;
+    flex: 0 0 600px;
+    min-width: 200px;
+    font-family: verdana;
+}
+
+/* To hide content when window display is condensed. */
+/* @media (max-width: 690px){
+    #allPosts {
+        display: none;
+    }
+} */
+
+#categories {
+    padding-top: 10px;
+    background: lightgreen;
+    flex: 0 0 300px;
+    margin-left: 20px;
+    font-family: verdana;
+}

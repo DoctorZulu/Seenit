@@ -7,8 +7,9 @@ const controllers = require("./controllers");
 
 const app = express();
 
-const PORT = 4000
-;
+
+const PORT = 4000;
+
 
 app.set("view engine", "ejs"); 
 /* ==== Middleware ==== */
@@ -28,7 +29,7 @@ app.use(
     {
       // set the store to the MongoStore we required
       store: new MongoStore({
-        url: "mongodb://localhost:27017/seenit"
+        url: "mongodb+srv://Lamsauce:S91183s91183@sei.my3su.mongodb.net/SEI?retryWrites=true&w=majority"
 
       }),
       // our secret is a signature in our sessions to verify that it is valid
