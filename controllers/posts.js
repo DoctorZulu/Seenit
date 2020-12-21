@@ -14,7 +14,7 @@ router.get("/", async function(req,res){
 
     try {
       const allPosts = await db.Post.find({});
-      const aUser = await db.User.find({})
+      const aUser = await db.User.findById(req.params.id)
   
       const context = {post: allPosts, user: aUser}
       return res.render("posts/index", context);
