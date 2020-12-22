@@ -43,10 +43,13 @@
       </div>
     </div>
     </nav>
+
     <main>
         <!-- VIEW POSTS -->
         <div class="jumbotron text-center">
         <section>
+
+
             <h2>Post Data</h2>
             <a href="/posts/<%= post._id %>/edit">Edit</a>
             <aside>
@@ -56,6 +59,7 @@
             <ul>
                 <li>Post Name: <%= post.title %></li>
                 <li>User: <%= user.username %></li>
+
                 <li>Body: <%= post.body %></li>
                 
             </ul>
