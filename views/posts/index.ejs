@@ -56,20 +56,17 @@
       
           <ul>
             <% post.forEach(post => { %>
-            <li>
+            <li class="container">
               <a href="/posts/<%= post._id %>"> <%= post.title %> </a>
               <a href="/posts/<%= post._id %>"> <%= post.category %> </a>
               <a href="/posts/<%= post._id %>"> <%= post.author %> </a>
             </li>
             <% }) %>
         </div>
-      
-    
       </ul>
 
       <div class="col-sm-3" id="categories">
 
-     
       <% if (user){ %>
         <p><%= user.username %></p>
       <form action="/logout?_method=DELETE" method="POST">
@@ -81,34 +78,34 @@
       <h2>Categories</h2>
       <ul>
         
-        <li id="container">
+        <li class="container" id="topContainer">
           <a href="/posts/"> All</a>
         </li>
-        <li id="container">
+        <li class="container">
           <a href="/posts/category/category?=Music"> Music </a>
         </li>
-        <li id="container">
+        <li class="container">
           <a href="/posts/category/category?=Aww"> Aww </a>
         </li>
-        <li id="container">
+        <li class="container">
           <a href="/posts/category/category?=World_Events"> World Events</a>
         </li>
-        <li id="container">
+        <li class="container">
           <a href="/posts/category/category?=Gaming"> Gaming </a>
         </li>
-        <li id="container">
+        <li class="container">
           <a href="/posts/category/category?=YouTube"> YouTube </a>
         </li>
-        <li id="container">
+        <li class="container">
           <a href="/posts/category/category?=Well_That_Sucks"> Well That Sucks </a>
-        </li id="container">
-        <li id="container">
+        </li>
+        <li class="container">
           <a href="/posts/category/category?=Roast_Me"> Roast Me </a>
         </li>
-        <li id="container"> 
+        <li class="container"> 
           <a href="/posts/category/category?=Casual"> Casual </a>
         </li>
-        <li id="container">
+        <li class="container" id="bottomContainer">
           <a href="/posts/category/category?=Dank_Memes"> Dank Memes</a>
         </li>
         
