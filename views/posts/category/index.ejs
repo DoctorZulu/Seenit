@@ -10,6 +10,7 @@
     
     <!-- CSS link -->
     <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <title>Seenit | Index</title>
   </head>
@@ -24,7 +25,7 @@
 <nav>
 <div class="row" id="nav">
   <div class="col-sm-7">
-    <h1>Seenit</h1>
+    <h1><i class="fab fa-reddit"></i>Seenit</h1>
   </div>
 
   <div class="col-sm-2" id="link">
@@ -43,11 +44,13 @@
 
       <div class="row">
         <div class="col-sm-7" id="allPosts">
+          <% let title = true %>
+          <% post.forEach(post => { %>
+            <% if (title === true) { %>
           <h2>R/<%= post.category %></h2>
-      
-      <% if(post.length === 0) { %>
-        <a href="/posts/new">Create A New Post</a>
-      <% } %>
+          <% title = false %>
+          <% }}) %>
+
 
 
           <% if(!post.length) { %>
@@ -82,31 +85,31 @@
           <a href="/posts/"> All</a>
         </li>
         <li class="container">
-          <a href="/posts/category?category=Music"> Music </a>
+          <a href="/posts/category?category=music"> Music </a>
         </li>
         <li class="container">
-          <a href="/posts/category?category=Aww"> Aww </a>
+          <a href="/posts/category?category=aww"> Aww </a>
         </li>
         <li class="container">
-          <a href="/posts/category?category=World_Events"> World Events</a>
+          <a href="/posts/category?category=worldevents"> World Events</a>
         </li>
         <li class="container">
-          <a href="/posts/category?category=Gaming"> Gaming </a>
+          <a href="/posts/category?category=gaming"> Gaming </a>
         </li>
         <li class="container">
-          <a href="/posts/category?category=YouTube"> YouTube </a>
+          <a href="/posts/category?category=youtube"> YouTube </a>
         </li>
         <li class="container">
-          <a href="/posts/category?category=Well_That_Sucks"> Well That Sucks </a>
+          <a href="/posts/category?category=wellthatsucks"> Well That Sucks </a>
         </li>
         <li class="container">
-          <a href="/posts/category?category=Roast_Me"> Roast Me </a>
+          <a href="/posts/category?category=roastme"> Roast Me </a>
         </li>
         <li class="container"> 
-          <a href="/posts/category?category=Casual"> Casual </a>
+          <a href="/posts/category?category=casual"> Casual </a>
         </li>
         <li class="container" id="bottomContainer">
-          <a href="/posts/category/category?=Dank_Memes"> Dank Memes</a>
+          <a href="/posts/category/category?=dankmemes"> Dank Memes</a>
         </li>
         
       </ul>
