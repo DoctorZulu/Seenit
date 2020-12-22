@@ -101,6 +101,8 @@ ul {
 }
 
 #show {
+    display: grid;
     flex-direction: row;
     justify-content: center;
+    text-align: center;
 }
