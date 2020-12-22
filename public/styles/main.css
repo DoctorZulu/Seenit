@@ -1,17 +1,32 @@
 nav {
     margin-bottom: 20px;
-    background: maroon;
+    background: #ff5700;
     min-width: 200px;
     flex: 0 0 600px;
 }
 
 h1 {
-    
+    padding-left: 10px;
+}
+
+body{
+    background-color: #cee3f8;
+}
+
+.newPost {
+    height: 30px;
+    width: 180px;
+}
+
+#container {
+    border-style: solid;
+    padding: 5px;
+    border-color: #30383f;
 }
 
 #link {
-    text-align: center;
     padding: 15px;
+    margin-right: 15px;
 }
 
 main {
@@ -21,12 +36,13 @@ main {
 
 #allPosts {
     padding-top: 10px;
-    background: lightblue;
+    background: white;
     margin-left: 40px;
     margin-right: 20px;
     flex: 0 0 600px;
     min-width: 200px;
     font-family: verdana;
+    border-radius: 25px;
 }
 
 /* To hide content when window display is condensed. */
@@ -38,8 +54,16 @@ main {
 
 #categories {
     padding-top: 10px;
-    background: lightgreen;
+    padding-bottom: 10px;
     flex: 0 0 300px;
     margin-left: 20px;
     font-family: verdana;
+    background-color: white;
+    border-radius: 25px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }

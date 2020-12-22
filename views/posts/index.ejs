@@ -23,7 +23,7 @@
     <!-- Seenit LOGO and Login/Register Bar -->
 <nav>
 <div class="row" id="nav">
-  <div class="col-sm-8">
+  <div class="col-sm-7">
     <h1>Seenit</h1>
   </div>
 
@@ -44,8 +44,6 @@
       <div class="row">
         <div class="col-sm-7" id="allPosts">
           <h2>All Posts</h2>
-
-      <h2>All Posts</h2>
       
       <% if(post.length === 0) { %>
         <a href="/posts/new">Create A New Post</a>
@@ -83,38 +81,36 @@
       <h2>Categories</h2>
       <ul>
         
-        <li>
+        <li id="container">
           <a href="/posts/"> All</a>
-
         </li>
-        <li>
+        <li id="container">
           <a href="/posts/category/category?=Music"> Music </a>
         </li>
-        <li>
+        <li id="container">
           <a href="/posts/category/category?=Aww"> Aww </a>
         </li>
-        <li>
+        <li id="container">
           <a href="/posts/category/category?=World_Events"> World Events</a>
         </li>
-        <li>
+        <li id="container">
           <a href="/posts/category/category?=Gaming"> Gaming </a>
         </li>
-        <li>
+        <li id="container">
           <a href="/posts/category/category?=YouTube"> YouTube </a>
         </li>
-        <li>
+        <li id="container">
           <a href="/posts/category/category?=Well_That_Sucks"> Well That Sucks </a>
-        </li>
-        <li>
+        </li id="container">
+        <li id="container">
           <a href="/posts/category/category?=Roast_Me"> Roast Me </a>
         </li>
-        <li>
+        <li id="container"> 
           <a href="/posts/category/category?=Casual"> Casual </a>
         </li>
-        <li>
+        <li id="container">
           <a href="/posts/category/category?=Dank_Memes"> Dank Memes</a>
         </li>
-        
         
       </ul>
     </div>
