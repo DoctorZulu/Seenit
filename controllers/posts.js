@@ -48,8 +48,9 @@ router.get("/", async function(req,res){
   router.get("/:id", async function(req,res){
 
     try {
-      const foundPost = await db.Post.findById(req.params.id).populate("posts");
-  
+      const foundPost = await db.Post.findById(req.params.id).populate("comments author").populate("comments.commentauthor");
+      console.log(foundPost)
+      //const foundComments = await db.Post.
       const context = { post: foundPost };
       return res.render("posts/show", context);
   
@@ -63,7 +64,8 @@ router.get("/", async function(req,res){
   
   
     try {
-      //req.body.createdBy = req.session.currentUser.id
+      req.body.author = req.session.currentUser.id
+      console.log(req.session.currentUser);
       await db.Post.create(req.body);
       return res.redirect("/posts");
     } catch(err){
@@ -133,6 +135,7 @@ router.get("/:id/edit",  function(req,res){
 
 router.post("/:id/comments", /*authRequired,*/ function(req, res){
   db.Post.findById(req.params.id, function (err, foundPost) {
+    req.body.commentauthor = req.session.currentUser.id
     foundPost.comments.push(req.body);
     foundPost.save();
     return res.redirect(`/posts/${foundPost._id}`);

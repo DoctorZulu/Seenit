@@ -58,7 +58,7 @@
                 </aside>
                 <ul>
                     
-                    <li>Author: <%= user.username %></li>
+                    <li>Author: <%= post.author.username %></li>
     
                     <li><%= post.body %></li>
                     
@@ -93,7 +93,7 @@
                     <span class="align-text-middle"></span>
                 <p>
                     <%= comment.commentbody %>
-                    <%= comment.commentauthor %>
+                    <%= comment.commentauthor.username %>
                 </p>
                 <% }) %>
             </table>

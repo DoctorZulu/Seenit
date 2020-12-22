@@ -6,12 +6,12 @@ const postSchema = mongoose.Schema(
 	{
 		title: { type: String },
 		body: { type: String },
-        author: { type: mongoose.Schema.Types.ObjectId, ref: "Author" },
+        author: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
         category: { type: String},
         comments: [
             {
                 commentbody: { type: String},
-                commentauthor: { type: mongoose.Schema.Types.ObjectId, ref: "Author" },
+                commentauthor: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
             }
         ]
 	},
