@@ -3,6 +3,7 @@ nav {
     background: #ff5700;
     min-width: 200px;
     flex: 0 0 600px;
+    color: white;
 }
 
 h1 {
@@ -54,6 +55,13 @@ main {
     width: 1000px;
 }
 
+a {
+    color: black;
+}
+
+#navlink{
+    color: white;
+}
 #allPosts {
     padding-top: 10px;
     background: white;
@@ -63,6 +71,7 @@ main {
     min-width: 200px;
     font-family: verdana;
     border-radius: 25px;
+    padding-bottom: 20px;
 }
 
 @import url('http://getbootstrap.com/dist/css/bootstrap.css');
@@ -92,6 +101,7 @@ main {
     font-family: verdana;
     background-color: white;
     border-radius: 25px;
+    height: 500px;
 }
 
 ul {
