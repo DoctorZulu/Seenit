@@ -18,6 +18,15 @@ body{
     width: 180px;
 }
 
+.post {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.postCategory {
+    font-size: 12px;
+}
+
 .container {
     border-style: solid;
     padding: 5px;

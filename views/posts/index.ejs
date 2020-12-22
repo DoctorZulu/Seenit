@@ -57,9 +57,9 @@
           <ul>
             <% post.forEach(post => { %>
             <li class="container">
-              <a href="/posts/<%= post._id %>"> <%= post.title %> </a>
-              <a href="/posts/<%= post._id %>"> <%= post.category %> </a>
-              <a href="/posts/<%= post._id %>"> <%= post.author %> </a>
+              <a class="post" href="/posts/<%= post._id %>"> <%= post.title %> </a>
+              <a class="postCategory" href="/posts/<%= post._id %>"> <%= post.category %> </a>
+              <a class="user" href="/posts/<%= post._id %>"> <%= post.author %> </a>
             </li>
             <% }) %>
         </div>
