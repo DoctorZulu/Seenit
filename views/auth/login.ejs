@@ -10,6 +10,7 @@
     
     <!-- CSS link -->
     <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <title>Seenit | Index</title>
   </head>
@@ -23,19 +24,22 @@
 </head>
 <body>
   <nav>
-    <div class="row" id="nav">
+    <div class="row text-left" id="nav">
       <div class="col-sm-8">
-        <h1>Seenit</h1>
+        <h1><i class="fab fa-reddit-square"></i>Seenit</h1>
       </div>
     
       <div class="col-sm-2" id="link">
-        <a href="/posts/new">Create A New Post</a>
+        
+        <a href="/posts/new" data-toogle="tooltip" title="Create a post"><i class="fas fa-pencil-alt"></i></a>
       </div>
        <div class="col-sm-1" id="link">
-        <a href="">Login</a>
+        
+        <a href="/login" data-toogle="tooltip" title="Log in"><i class="fas fa-sign-in-alt"></i></a>
        </div>
         <div class="col-sm-1" id="link">
-        <a href="">Register</a>
+          
+        <a href="/register" data-toogle="tooltip" title="Create profile"><i class="fas fa-user-plus"></i></a>
       </div>
     </div>
     </nav>
