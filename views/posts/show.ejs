@@ -11,8 +11,6 @@
 
     <!-- CSS link -->
     <link rel="stylesheet" type="text/css" href="./styles/main.css">
-    
-    <title>Posts</title>
 </head>
 <body>
 
@@ -39,21 +37,21 @@
         </div>
         </nav>
 
-    <nav>
+<!--     <nav>
         <h1>Post</h1>
         <ul>
             <li>
             <a href="/posts">Posts</a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
     <main>
         <!-- VIEW POSTS -->
         <section>
-            <h2>Post Data</h2>
+            <h2><%= post.title %></h2>
             <a href="/post/<%= post._id %>/edit">Edit</a>
             <ul>
-                <li>Post Name: <%= post.name %></li>
+                <li>Post Name: <%= post.title %></li>
                 <li>Body: <%= post.body %></li>
                 <li>User: <%= post.author %></li>
             </ul>
