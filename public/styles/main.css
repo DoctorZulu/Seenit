@@ -99,3 +99,8 @@ ul {
     padding: 0px;
     margin: 0px;
 }
+
+#show {
+    flex-direction: row;
+    justify-content: center;
+}

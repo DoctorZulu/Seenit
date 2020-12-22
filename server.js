@@ -8,7 +8,7 @@ const controllers = require("./controllers");
 const app = express();
 
 
-const PORT = 4004;
+const PORT = 4000;
 
 
 app.set("view engine", "ejs"); 
