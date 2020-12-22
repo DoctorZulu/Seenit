@@ -43,7 +43,7 @@
 
       <div class="row">
         <div class="col-sm-7" id="allPosts">
-          <h2>R/<%= post.category %></h2>
+          <h2>R/ <%= post.category %></h2>
       
       <% if(post.length === 0) { %>
         <a href="/posts/new">Create A New Post</a>
@@ -56,6 +56,8 @@
       
           <ul>
             <% post.forEach(post => { %>
+              
+          <h2>R/ <%= post.category %></h2>
             <li class="container">
               <a class="post" href="/posts/<%= post._id %>"> <%= post.title %> </a>
               <a class="postCategory" href="/posts/<%= post._id %>"> <%= post.category %> </a>
