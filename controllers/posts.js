@@ -1,7 +1,7 @@
 const express = require ("express");
 const router = express.Router();
 const db = require("../models");
-const { post } = require("./auth");
+//const { post } = require("./auth");
 const authRequired = require("../middleware/authRequired")
 
 
@@ -14,7 +14,7 @@ router.get("/", async function(req,res){
 
     try {
       const allPosts = await db.Post.find({});
-      //const aUser = await db.User.findById(req.session.id);
+      
       console.log(req.session, "post/index")
   
       const context = {post: allPosts}
@@ -72,14 +72,13 @@ router.get("/", async function(req,res){
     }
   
   });
-
-  router.get("/:id/edit", /*authRequired,*/ function(req,res){
-
+// Edit
+router.get("/:id/edit",  function(req,res){
     db.Post.findById(req.params.id, function (err, foundPost) {
-      if (err) return res.send(err);
+        if (err) return res.send(err);
       
-      const context = { post: foundPost };
-      return res.render("posts/edit", context);
+        const context = { post: foundPost };
+        return res.render("posts/edit", context);
     });
   
   });
