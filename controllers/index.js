@@ -1,4 +1,4 @@
 module.exports = {
-    posts: require("./posts"),
-    auth: require("./auth")
-  }
+  posts: require("./posts"),
+  auth: require("./auth")
+}
