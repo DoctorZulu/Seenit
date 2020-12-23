@@ -1,0 +1,227 @@
+nav {
+    margin-bottom: 20px;
+    background: #ff5700;
+    min-width: 200px;
+    color: white;
+}
+
+h1 {
+    padding-left: 10px;
+}
+
+body{
+    background-color: #cee3f8;
+}
+
+.newPost {
+    height: 30px;
+    width: 180px;
+}
+
+.post {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.postCategory {
+    font-size: 12px;
+}
+
+.container {
+    border-style: solid;
+    padding: 5px;
+    border-color: #5f99cf;
+    border-width: thin;
+}
+
+/* #topContainer {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} */
+
+#link {
+    padding: 15px;
+    margin-right: 15px;
+}
+
+main {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#containerText {
+    color: black;
+}
+
+#navlink{
+    color: white;
+}
+#allPosts {
+    padding-top: 10px;
+    background: white;
+    margin-left: 40px;
+    margin-right: 20px;
+    flex: 0 0 600px;
+    min-width: 200px;
+    font-family: verdana;
+    border-radius: 25px;
+    padding-bottom: 20px;
+}
+
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+ html, body, .container-table {
+    height: 100%;
+}
+.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#categories {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex: 0 0 300px;
+    margin-left: 20px;
+    font-family: verdana;
+    background-color: white;
+    border-radius: 25px;
+    height: 500px;
+}
+
+#createButton {
+    background-color: rgba(25, 104, 223, 0.884);
+    border-radius: 25px;
+    color: white;
+    border-color: rgba(25, 104, 223, 0.884);
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#show {
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.textbox {
+    height: 300px;
+    width: 600px;
+}
+
+.commentbox {
+    width: 570px;
+    height: 100px;
+    background: rgb(236, 236, 236);;
+}
+
+.showPost {
+    border-style: solid;
+    padding: 5px;
+    border-color: grey;
+    border-width: thin;
+    margin-bottom: 20px;
+    background: rgb(236, 236, 236);
+}
+
+#authorText {
+    font-size: 10px;
+}
+
+#bodyText {
+    font-size: 18px;
+    font-weight: normal;
+    border-style: solid;
+    padding: 5px;
+    border-color: grey;
+    border-width: thin;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+#editButton {
+    background-color: rgba(25, 104, 223, 0.884);
+    border-color: rgba(25, 104, 223, 0.884);
+    font-size: 12px;
+    margin-left: 20px;
+    border-radius: 25px;
+    margin-right: 5px;
+}
+
+#editText {
+    color:white;
+    
+}
+
+#titleText{
+    margin: 0px;
+}
+
+#username {
+    margin: 0px;
+    font-weight: bold;
+}
+
+#logoutButton {
+    font-size: 10px;
+    background-color: rgba(25, 104, 223, 0.884);
+    border-radius: 25px;
+    color: white;
+    border-color: rgba(25, 104, 223, 0.884);
+    padding: 5px;
+}
+
+#deleteButton {
+    background-color: rgba(25, 104, 223, 0.884);
+    color: white;
+    border-color: rgba(25, 104, 223, 0.884);
+    font-size: 12px;
+}
+
+#commentText {
+    border-style: solid;
+    padding: 5px;
+    border-color: grey;
+    border-width: thin;
+    background: rgb(236, 236, 236);
+}
+
+#commentButton {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    background-color: rgba(25, 104, 223, 0.884);
+    border-radius: 25px;
+    color: white;
+    border-color: rgba(25, 104, 223, 0.884);
+    padding: 5px;
+}
+
+#commentAuthor {
+    font-size: 12px;
+    color:  #ff5700
+}
+
+.postContainer {
+    border-style: solid;
+    padding: 5px;
+    border-color:black;
+    border-width: thin;
+}
+
+#deleteButton {
+    width: 60px;
+    border-radius: 25px;
+}
