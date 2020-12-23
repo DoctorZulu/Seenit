@@ -2,7 +2,6 @@ nav {
     margin-bottom: 20px;
     background: #ff5700;
     min-width: 200px;
-    flex: 0 0 600px;
     color: white;
 }
 
@@ -22,6 +21,7 @@ body{
 .post {
     font-size: 20px;
     font-weight: bold;
+    color: black;
 }
 
 .postCategory {
@@ -50,7 +50,7 @@ main {
     width: 1000px;
 }
 
-a {
+#containerText {
     color: black;
 }
 
@@ -121,14 +121,16 @@ ul {
 .commentbox {
     width: 570px;
     height: 100px;
+    background: rgb(236, 236, 236);;
 }
 
 .showPost {
     border-style: solid;
     padding: 5px;
-    border-color: #5f99cf;
+    border-color: grey;
     border-width: thin;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    background: rgb(236, 236, 236);
 }
 
 #authorText {
@@ -138,4 +140,79 @@ ul {
 #bodyText {
     font-size: 18px;
     font-weight: normal;
+    border-style: solid;
+    padding: 5px;
+    border-color: grey;
+    border-width: thin;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+#editButton {
+    background-color: rgba(25, 104, 223, 0.884);
+    border-color: rgba(25, 104, 223, 0.884);
+    font-size: 12px;
+}
+
+#editText {
+    color:white;
+}
+
+#titleText{
+    margin: 0px;
+}
+
+#username {
+    margin: 0px;
+    font-weight: bold;
+}
+
+#logoutButton {
+    font-size: 10px;
+    background-color: rgba(25, 104, 223, 0.884);
+    border-radius: 25px;
+    color: white;
+    border-color: rgba(25, 104, 223, 0.884);
+    padding: 5px;
+}
+
+#deleteButton {
+    background-color: rgba(25, 104, 223, 0.884);
+    color: white;
+    border-color: rgba(25, 104, 223, 0.884);
+    font-size: 12px;
+}
+
+#commentText {
+    border-style: solid;
+    padding: 5px;
+    border-color: grey;
+    border-width: thin;
+    background: rgb(236, 236, 236);
+}
+
+#commentButton {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    background-color: rgba(25, 104, 223, 0.884);
+    border-radius: 25px;
+    color: white;
+    border-color: rgba(25, 104, 223, 0.884);
+    padding: 5px;
+}
+
+#commentAuthor {
+    font-size: 12px;
+    color:  #ff5700
+}
+
+.postContainer {
+    border-style: solid;
+    padding: 5px;
+    border-color:black;
+    border-width: thin;
 }

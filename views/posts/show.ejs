@@ -49,13 +49,15 @@
         <div class="post">
             <section class="showPost">
     
-                <h2><%= post.title %></h2>
+                <h2 id="titleText"><%= post.title %></h2>
 
-                <button>
-                <a href="/posts/<%= post._id %>/edit">Edit</a>
+                <button id="editButton">
+                <a id="editText" href="/posts/<%= post._id %>/edit">Edit</a>
                 </button>
 
-
+                <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                  <input id="deleteButton" type="submit" value="Delete" />
+                </form>
 
                 <aside>
                     <i class="fas fa-arrow-up"></i>
@@ -68,10 +70,6 @@
                     <li id="bodyText"><%= post.body %></li>
                     
                 </ul>
-
-                <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-                  <input type="submit" value="Delete" />
-                </form>
             </section>
     </div>
 
@@ -79,29 +77,25 @@
             <!-- VIEW COMMENTS -->
             
             <div class="comment">
-            <p>
                 <form action="/posts/<%= post._id %>/comments" method="POST">
                     <p>
                       <textarea type="text" class="commentbox" name="commentbody" placeholder="Write your comment here..."></textarea>
                     </p>
                     
-                    <input type="submit" value="Add Comment" />
+                    <input id="commentButton" type="submit" value="Add Comment" />
                   </form>
-                
                   
                 <% post.comments.forEach ( comment => { %>
-                    <table style="height: 100px;"></table>
                     <span class="align-baseline">
                         <i class="fas fa-arrow-up"></i>
                         <i class="fas fa-arrow-down"></i>
                     </span>
                     <span class="align-text-middle"></span>
-                <p>
-                    <%= comment.commentbody %>
-                    <%= comment.commentauthor.username %>
-                </p>
+                <ul id="commentText">
+                    <li id="commentBody"><%= comment.commentbody %></li>
+                    <li id="commentAuthor"><%= comment.commentauthor.username %></li>
+                </ul>
                 <% }) %>
-            </table>
             
             
         </p>
@@ -111,9 +105,9 @@
     <div class="col-sm-3" id="categories">
 
         <% if (user){ %>
-          <p><%= user.username %></p>
+          <p id="username"><%= user.username %></p>
         <form action="/logout?_method=DELETE" method="POST">
-          <input type="submit" value="Logout">
+          <input id="logoutButton" type="submit" value="Sign Out">
         </form>
         <% } %>
   
@@ -122,34 +116,34 @@
         <ul>
           
             <li class="container" id="topContainer">
-                <a href="/posts/"> All</a>
+                <a id="containerText" href="/posts/"> All</a>
               </li>
               <li class="container">
-                <a href="/posts/category?category=music"> Music </a>
+                <a id="containerText" href="/posts/category?category=music"> Music </a>
               </li>
               <li class="container">
-                <a href="/posts/category?category=aww"> Aww </a>
+                <a id="containerText" href="/posts/category?category=aww"> Aww </a>
               </li>
               <li class="container">
-                <a href="/posts/category?category=worldevents"> World Events</a>
+                <a id="containerText" href="/posts/category?category=worldevents"> World Events</a>
               </li>
               <li class="container">
-                <a href="/posts/category?category=gaming"> Gaming </a>
+                <a id="containerText" href="/posts/category?category=gaming"> Gaming </a>
               </li>
               <li class="container">
-                <a href="/posts/category?category=youtube"> YouTube </a>
+                <a id="containerText" href="/posts/category?category=youtube"> YouTube </a>
               </li>
               <li class="container">
-                <a href="/posts/category?category=wellthatsucks"> Well That Sucks </a>
+                <a id="containerText" href="/posts/category?category=wellthatsucks"> Well That Sucks </a>
               </li>
               <li class="container">
-                <a href="/posts/category?category=roastme"> Roast Me </a>
+                <a id="containerText" href="/posts/category?category=roastme"> Roast Me </a>
               </li>
               <li class="container"> 
-                <a href="/posts/category?category=casual"> Casual </a>
+                <a id="containerText" href="/posts/category?category=casual"> Casual </a>
               </li>
               <li class="container" id="bottomContainer">
-                <a href="/posts/category/category?=dankmemes"> Dank Memes</a>
+                <a id="containerText" href="/posts/category/category?=dankmemes"> Dank Memes</a>
               </li>
           
         </ul>
