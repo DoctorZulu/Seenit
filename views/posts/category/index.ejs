@@ -3,31 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Bootstrap Library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    
     <!-- CSS link -->
     <link rel="stylesheet" type="text/css" href="../styles/main.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
     <title>Seenit | Index</title>
   </head>
   <body>
-
     <!-- Jquery Library + Bootstrap JavaScript Library-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
     <!-- Seenit LOGO and Login/Register Bar -->
 <nav>
 <div class="row" id="nav">
   <div class="col-sm-7">
     <a href="/posts"  id="navlink" class="logo"><h1><i class="fab fa-reddit"></i>Seenit</h1></a>
   </div>
-
   <div class="col-sm-2" id="link">
     <a  id="navlink" href="/posts/new">Create A New Post</a>
   </div>
@@ -39,9 +32,7 @@
   </div>
 </div>
 </nav>
-
     <main class="show">
-
       <div class="row">
         <div class="col-sm-7" id="allPosts">
           <% let title = true %>
@@ -50,13 +41,9 @@
           <h2>R/<%= post.category %></h2>
           <% title = false %>
           <% }}) %>
-
-
-
           <% if(!post.length) { %>
             <a href="/posts/new">Create A New Post</a>
           <% } %>
-      
           <ul>
             <% post.forEach(post => { %>
             <li class="container">
@@ -67,20 +54,15 @@
             <% }) %>
         </div>
       </ul>
-
       <div class="col-sm-3" id="categories">
-
       <% if (user){ %>
         <p><%= user.username %></p>
       <form action="/logout?_method=DELETE" method="POST">
         <input type="submit" value="Logout">
       </form>
       <% } %>
-
-
       <h2>Categories</h2>
       <ul>
-        
         <li class="container" id="topContainer">
           <a href="/posts/"> All</a>
         </li>
@@ -111,12 +93,9 @@
         <li class="container" id="bottomContainer">
           <a href="/posts/category/category?=dankmemes"> Dank Memes</a>
         </li>
-        
       </ul>
     </div>
     </div>
-
-      
     </main>
   </body>
 </html>
