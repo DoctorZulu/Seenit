@@ -14,6 +14,7 @@ router.get("/", async function(req,res){
 
     try {
       const allPosts = await db.Post.find({});
+      console.log(allPosts);
       
       console.log(req.session, "post/index")
   
