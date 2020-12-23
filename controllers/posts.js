@@ -86,7 +86,7 @@ router.get("/:id/edit", authRequired,  function(req,res){
   
   });
 
-  router.put("/:id", /*authRequired,*/ function(req,res){
+  router.put("/:id", authRequired, function(req,res){
     db.Post.findByIdAndUpdate(
       req.params.id, 
       {

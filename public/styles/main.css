@@ -227,3 +227,7 @@ textbox {
     background: white;
 }
 
+aside:hover {
+    cursor: pointer;
+}
+
