@@ -10,7 +10,7 @@ const authRequired = require("../middleware/authRequired")
  
 
 // all category index
-router.get("/", async function(req,res){
+router.get("/", authRequired, async function(req,res){
 
     try {
       const allPosts = await db.Post.find({});
@@ -29,7 +29,7 @@ router.get("/", async function(req,res){
 
  
 //category index route
- router.get("/category", function(req,res){
+ router.get("/category", authRequired, function(req,res){
   console.log(req.query)
   db.Post.find({category: req.query.category},function(err, foundData){
     console.log(req.query.category)
@@ -46,7 +46,7 @@ router.get("/", async function(req,res){
 
   // Article show
 
-  router.get("/:id", async function(req,res){
+  router.get("/:id", authRequired, async function(req,res){
 
     try {
       const foundPost = await db.Post.findById(req.params.id).populate("comments author").populate("comments.commentauthor");
