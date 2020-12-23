@@ -14,6 +14,7 @@ router.get("/", async function(req,res){
 
     try {
       const allPosts = await db.Post.find({});
+      console.log(allPosts);
       
       console.log(req.session, "post/index")
   
@@ -75,7 +76,7 @@ router.get("/", async function(req,res){
   
   });
 // Edit
-router.get("/:id/edit",  function(req,res){
+router.get("/:id/edit", authRequired,  function(req,res){
     db.Post.findById(req.params.id, function (err, foundPost) {
         if (err) return res.send(err);
       
@@ -85,7 +86,7 @@ router.get("/:id/edit",  function(req,res){
   
   });
 
-  router.put("/:id", /*authRequired,*/ function(req,res){
+  router.put("/:id", authRequired, function(req,res){
     db.Post.findByIdAndUpdate(
       req.params.id, 
       {
@@ -103,7 +104,7 @@ router.get("/:id/edit",  function(req,res){
     );
   });
 
-  router.delete("/:id", /*authRequired,*/ async function(req,res){
+  router.delete("/:id", authRequired, async function(req,res){
 
   
     try {
@@ -122,7 +123,7 @@ router.get("/:id/edit",  function(req,res){
 
  
 
-  router.get("/:id/comments/new", /*authRequired,*/ function(req,res){
+  router.get("/:id/comments/new", authRequired, function(req,res){
 
     db.Post.findById(req.params.id, function (err, foundPost) {
       if (err) return res.send(err);
@@ -133,7 +134,7 @@ router.get("/:id/edit",  function(req,res){
 
 });
 
-router.post("/:id/comments", /*authRequired,*/ function(req, res){
+router.post("/:id/comments", authRequired, function(req, res){
   db.Post.findById(req.params.id, function (err, foundPost) {
     req.body.commentauthor = req.session.currentUser.id
     foundPost.comments.push(req.body);
@@ -145,7 +146,7 @@ router.post("/:id/comments", /*authRequired,*/ function(req, res){
   
 });
 
-router.put("/:id", function(req,res){
+router.put("/:id", authRequired, function(req,res){
   db.Post.findByIdAndUpdate(
     req.params.id, 
     {

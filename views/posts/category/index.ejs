@@ -49,18 +49,19 @@
             <li class="container">
               <a class="post" href="/posts/<%= post._id %>"> <%= post.title %> </a>
               <a class="postCategory" href="/posts/<%= post._id %>"> <%= post.category %> </a>
-              <a class="user" href="/posts/<%= post._id %>"> <%= post.author %> </a>
+              <a class="user" href="/posts/<%= post._id %>"> <%= post.author.username %> </a>
             </li>
             <% }) %>
         </div>
       </ul>
       <div class="col-sm-3" id="categories">
-      <% if (user){ %>
-        <p><%= user.username %></p>
-      <form action="/logout?_method=DELETE" method="POST">
-        <input type="submit" value="Logout">
-      </form>
-      <% } %>
+
+        <% if (user){ %>
+          <p id="username"><%= user.username %></p>
+        <form action="/logout?_method=DELETE" method="POST">
+          <input id="logoutButton" type="submit" value="Sign Out">
+        </form>
+        <% } %>
       <h2>Categories</h2>
       <ul>
         <li class="container" id="topContainer">
@@ -91,7 +92,7 @@
           <a href="/posts/category?category=casual"> Casual </a>
         </li>
         <li class="container" id="bottomContainer">
-          <a href="/posts/category/category?=dankmemes"> Dank Memes</a>
+          <a href="/posts/category?category=dankmemes"> Dank Memes</a>
         </li>
       </ul>
     </div>

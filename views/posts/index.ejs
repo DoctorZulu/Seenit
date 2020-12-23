@@ -11,8 +11,8 @@
     <!-- CSS link -->
     <link rel="stylesheet" type="text/css" href="../styles/main.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
     <title>Seenit | Index</title>
+    <link rel="shortcut icon" type="image/png" type="image/jpg" href="iconfinder_2018_social_media_popular_app_logo_reddit_3225187.png"/>
   </head>
   <body>
 
@@ -55,7 +55,7 @@
             <li class="postContainer">
               <a class="post" href="/posts/<%= post._id %>"> <%= post.title %> </a>
               <a class="postCategory" href="/posts/<%= post._id %>"> <%= post.category %> </a>
-              <a class="user" href="/posts/<%= post._id %>"> <%= post.author %> </a>
+              <a class="user" href="/posts/<%= post._id %>"><%= post.author.username %> </a>
             </li>
             <% }) %>
         </div>
@@ -102,7 +102,7 @@
             <a id="containerText" href="/posts/category?category=casual"> Casual </a>
           </li>
           <li class="container" id="bottomContainer">
-            <a id="containerText" href="/posts/category/category?=dankmemes"> Dank Memes</a>
+            <a id="containerText" href="/posts/category/?category=dankmemes"> Dank Memes</a>
           </li>
       
     </ul>

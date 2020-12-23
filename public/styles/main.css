@@ -188,6 +188,8 @@ ul {
     color: white;
     border-color: rgba(25, 104, 223, 0.884);
     font-size: 12px;
+    width: 60px;
+    border-radius: 25px;
 }
 
 #commentText {
@@ -221,7 +223,11 @@ ul {
     border-width: thin;
 }
 
-#deleteButton {
-    width: 60px;
-    border-radius: 25px;
+textbox {
+    background: white;
 }
+
+aside:hover {
+    cursor: pointer;
+}
+
