@@ -40,7 +40,7 @@ router.get("/", async function(req,res){
   })
 })
 
-  router.get("/new", function(req,res){
+  router.get("/new", authRequired, function(req,res){
     res.render("posts/new");
   });
 
