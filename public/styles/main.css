@@ -122,3 +122,20 @@ ul {
     width: 570px;
     height: 100px;
 }
+
+.showPost {
+    border-style: solid;
+    padding: 5px;
+    border-color: #5f99cf;
+    border-width: thin;
+    margin-bottom: 10px;
+}
+
+#authorText {
+    font-size: 10px;
+}
+
+#bodyText {
+    font-size: 18px;
+    font-weight: normal;
+}

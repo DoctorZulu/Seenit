@@ -47,27 +47,32 @@
       
         <!-- VIEW POSTS -->
         <div class="post">
-            <section>
-    
+            <section class="showPost">
     
                 <h2><%= post.title %></h2>
+
+                <button>
                 <a href="/posts/<%= post._id %>/edit">Edit</a>
+                </button>
+
+
+
                 <aside>
                     <i class="fas fa-arrow-up"></i>
                     <i class="fas fa-arrow-down"></i>
                 </aside>
                 <ul>
                     
-                    <li>Author: <%= post.author.username %></li>
+                    <li id="authorText">Author: <%= post.author.username %></li>
     
-                    <li><%= post.body %></li>
+                    <li id="bodyText"><%= post.body %></li>
                     
                 </ul>
+
+                <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                  <input type="submit" value="Delete" />
+                </form>
             </section>
-            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete" />
-            </form>
-        </form>
     </div>
 
     
