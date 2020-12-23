@@ -52,7 +52,7 @@
                 <h2 id="titleText"><%= post.title %></h2>
 
                 <div class="row">
-              
+              <%if (post.author.username === user.username){ %>
                 <button id="editButton">
                 <a id="editText" href="/posts/<%= post._id %>/edit">Edit</a>
                 </button>
@@ -60,6 +60,7 @@
                 <form id="deleteButton" action="/posts/<%= post._id %>?_method=DELETE" method="POST">
                   <input id="deleteButton" type="submit" value="Delete" />
                 </form>
+                <% } %>
 
               </div>
 
