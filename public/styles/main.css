@@ -155,10 +155,14 @@ ul {
     background-color: rgba(25, 104, 223, 0.884);
     border-color: rgba(25, 104, 223, 0.884);
     font-size: 12px;
+    margin-left: 20px;
+    border-radius: 25px;
+    margin-right: 5px;
 }
 
 #editText {
     color:white;
+    
 }
 
 #titleText{
@@ -215,4 +219,9 @@ ul {
     padding: 5px;
     border-color:black;
     border-width: thin;
+}
+
+#deleteButton {
+    width: 60px;
+    border-radius: 25px;
 }
