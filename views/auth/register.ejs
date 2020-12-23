@@ -10,6 +10,7 @@
     
     <!-- CSS link -->
     <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <title>Seenit | Index</title>
   </head>
@@ -24,17 +25,17 @@
 <nav>
 <div class="row" id="nav">
   <div class="col-sm-7">
-    <h1>Seenit</h1>
+    <a href="/posts"  id="navlink" class="logo"><h1><i class="fab fa-reddit"></i>Seenit</h1></a>
   </div>
 
   <div class="col-sm-2" id="link">
-    <a href="/posts/new">Create A New Post</a>
+    <a  id="navlink" href="/posts/new">Create A New Post</a>
   </div>
    <div class="col-sm-1" id="link">
-    <a href="/login">Login</a>
+    <a  id="navlink" href="/login">Login</a>
    </div>
     <div class="col-sm-1" id="link">
-    <a href="/register">Register</a>
+    <a  id="navlink" href="/register">Register</a>
   </div>
 </div>
 </nav>
@@ -53,7 +54,7 @@
           <p>
               <input type="password" name="password" placeholder="Password">
           </p>
-          <input type="submit" value="Login"/>
+          <input type="submit" id="createButton" value="Login"/>
         </form>
         </main>
     </div>

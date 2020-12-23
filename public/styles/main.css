@@ -3,6 +3,7 @@ nav {
     background: #ff5700;
     min-width: 200px;
     flex: 0 0 600px;
+    color: white;
 }
 
 h1 {
@@ -49,6 +50,13 @@ main {
     width: 1000px;
 }
 
+a {
+    color: black;
+}
+
+#navlink{
+    color: white;
+}
 #allPosts {
     padding-top: 10px;
     background: white;
@@ -84,6 +92,14 @@ main {
     height: 500px;
 }
 
+#createButton {
+    background-color: rgba(25, 104, 223, 0.884);
+    border-radius: 25px;
+    color: white;
+    border-color: rgba(25, 104, 223, 0.884);
+    padding: 5px;
+}
+
 ul {
     list-style-type: none;
     padding: 0px;
@@ -95,4 +111,14 @@ ul {
     flex-direction: row;
     justify-content: center;
     text-align: center;
+}
+
+.textbox {
+    height: 300px;
+    width: 600px;
+}
+
+.commentbox {
+    width: 570px;
+    height: 100px;
 }

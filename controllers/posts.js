@@ -27,7 +27,7 @@ router.get("/", async function(req,res){
   });
 
  
-
+//category index route
  router.get("/category", function(req,res){
   console.log(req.query)
   db.Post.find({category: req.query.category},function(err, foundData){
